@@ -1,14 +1,22 @@
+---
 spring:
+  profiles: cloud
   datasource:
     hikari:
       connection-timeout: 60000
       maximum-pool-size: 5
 
 management:
+  cloudfoundry:
+    enabled: true
+    skip-ssl-validation: true
   endpoints:
     web:
       exposure:
         include: "*"
+  endpoint:
+    health:
+      show-details: always
 
 info: # add this section
   build:
@@ -16,3 +24,4 @@ info: # add this section
     name: @project.name@
     description: @project.description@
     version: @project.version@
+
