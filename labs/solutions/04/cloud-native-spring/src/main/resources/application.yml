@@ -1,0 +1,28 @@
+---
+spring:
+  profiles: cloud, default
+  datasource:
+    hikari:
+      connection-timeout: 60000
+      maximum-pool-size: 5
+
+info: # add this section
+  build:
+    artifact: @project.artifactId@
+    name: @project.name@
+    description: @project.description@
+    version: @project.version@
+
+
+
+management:
+  cloudfoundry:
+    enabled: true
+    skip-ssl-validation: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
