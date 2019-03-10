@@ -1,10 +1,19 @@
 ---
-  spring:
-  profiles: cloud
+spring:
+  profiles: cloud, default
   datasource:
     hikari:
       connection-timeout: 60000
       maximum-pool-size: 5
+
+info: # add this section
+  build:
+    artifact: @project.artifactId@
+    name: @project.name@
+    description: @project.description@
+    version: @project.version@
+
+
 
 management:
   cloudfoundry:
@@ -17,11 +26,3 @@ management:
   endpoint:
     health:
       show-details: always
-
-info: # add this section
-  build:
-    artifact: @project.artifactId@
-    name: @project.name@
-    description: @project.description@
-    version: @project.version@
-
