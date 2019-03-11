@@ -68,12 +68,20 @@ You’ll need to use your IDE’s features to add the appropriate import stateme
 
 == Use Flyway to manage schema 
 
-. Edit _build.gradle_ and add the following dependencies within the _dependencies {}_ block
+. Edit _pom.xml_ and add the following dependencies within the _dependencies_ 
 +
-[source,bash]
+[source,xml]
 ---------------------------------------------------------------------
-implementation('org.flywaydb:flyway-core:5.2.4')
-implementation('com.zaxxer:HikariCP:3.3.0')
+        <dependency>
+            <groupId>org.flywaydb</groupId>
+            <artifactId>flyway-core</artifactId>
+            <version>5.2.4</version>
+        </dependency>
+        <dependency>
+            <groupId>com.zaxxer</groupId>
+            <artifactId>HikariCP</artifactId>
+            <version>3.3.0</version>
+        </dependency>
 ---------------------------------------------------------------------
 
 . Create a new file named +V1_0__init_database.sql+ underneath _devops-workshop/labs/my_work/cloud-native-spring/src/main/resources/db/migration_, add the following lines and save.
