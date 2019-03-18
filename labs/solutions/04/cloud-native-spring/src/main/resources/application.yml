@@ -1,10 +1,15 @@
 ---
 spring:
   profiles: cloud, default
+  application:
+    name: cloud-native-spring
   datasource:
     hikari:
       connection-timeout: 60000
       maximum-pool-size: 5
+  main:
+    allow-bean-definition-overriding: true
+
 
 info: # add this section
   build:
@@ -26,3 +31,4 @@ management:
   endpoint:
     health:
       show-details: always
+
