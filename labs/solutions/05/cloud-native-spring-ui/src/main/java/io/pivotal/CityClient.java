@@ -1,0 +1,15 @@
+package io.pivotal;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.hateoas.Resources;
+import org.springframework.web.bind.annotation.GetMapping;
+import io.pivotal.domain.*;
+
+
+
+@FeignClient(name = "http://cloud-native-spring")
+public interface CityClient {
+
+    @GetMapping(value="/cities", consumes="application/hal+json")
+    Resources<City> getCities();
+}

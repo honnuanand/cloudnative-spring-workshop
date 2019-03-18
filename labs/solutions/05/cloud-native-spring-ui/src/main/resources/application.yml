@@ -1,7 +1,10 @@
+server:
+  port: 8989
+
 ---
 spring:
   application:
-    name: cloud-native-spring
+    name: cloud-native-spring-ui
   datasource:
     hikari:
       connection-timeout: 60000
@@ -35,8 +38,8 @@ spring:
   profiles: cloud
 
 feign:
-   httpclient:
-     disableSslValidation: false
+  httpclient:
+    disableSslValidation: false
 
 management:
   cloudfoundry:
