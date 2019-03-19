@@ -1,0 +1,10 @@
+---
+applications:
+- name: play-scala-starter-example
+  memory: 1024M
+  random-route: true
+  instances: 1
+  path: target/universal/play-scala-starter-example-1.0-SNAPSHOT.zip
+  buildpack: java_buildpack
+  env:
+    JAVA_OPTS: -Djava.security.egd=file:///dev/urandom

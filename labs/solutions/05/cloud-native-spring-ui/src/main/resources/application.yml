@@ -12,6 +12,7 @@ spring:
   main:
     allow-bean-definition-overriding: true
 
+feign-target: http://cloud-native-spring
 
 info: # add this section
   build:
@@ -40,6 +41,9 @@ spring:
 feign:
   httpclient:
     disableSslValidation: false
+
+feign-target: https://cloud-native-spring
+
 
 management:
   cloudfoundry:

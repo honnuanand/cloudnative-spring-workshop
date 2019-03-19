@@ -7,7 +7,7 @@ import io.pivotal.domain.*;
 
 
 
-@FeignClient(name = "http://cloud-native-spring")
+@FeignClient(name = "${feign-target}")
 public interface CityClient {
 
     @GetMapping(value="/cities", consumes="application/hal+json")
