@@ -118,12 +118,13 @@ Select _File > Import…_. In the susequent dialog choose _Gradle > Existing Mav
 +
 We'll also be using the Domain object from our main Boot application.  Add that as a dependency too:
 +
-[source,groovy]
+[source,xml]
 ---------------------------------------------------------------------
-dependencies {
-  // add this dependency
-  implementation('io.pivotal:cloud-native-spring:1.0-SNAPSHOT')
-}
+<dependency>
+    <groupId>io.pivotal</groupId>
+    <artifactId>cloud-native-spring</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+</dependency>
 ---------------------------------------------------------------------
 +
 If you remember earlier, we disabled security for `cloud-native-spring`, we'll do the same again for `cloud-native-spring-ui`. Open *cloud-native-spring-ui/src/main/java/io/pivotal/CloudNativeSpringUiApplication.java* for editing and make sure the contents look like so
@@ -152,7 +153,7 @@ public class CloudNativeSpringApplication {
 }
 ---------------------------------------------------------------------
 +
-Don't forget to adjust the imports!
+Don't forget to adjust the imports! and the *_spring-security-config_* dependency
 
 . Since this UI is going to consume REST services it's an awesome opportunity to use Feign.  Feign will handle *ALL* the work of invoking our services and marshalling/unmarshalling JSON into domain objects.  We'll add a Feign Client interface into our app.  Take note of how Feign references the downstream service; it's only the name of the service it will lookup from Eureka Service Registry.  Create a new interface that resides in the same package as _CloudNativeSpringUiApplication_:
 +
@@ -175,6 +176,34 @@ public interface CityClient {
 ---------------------------------------------------------------------
 +
 We'll also need to add a few annotations to our Spring Boot application:
+
++
+Make sure to change the build section in the *_cloud-native-spring project_* **pom** file to look as below. This is needed  as  the default pom file creates just an executable jar file and the *_ui_* cannot resolve the domain class. 
+
++
+[source,xml]
+---------------------------------------------------------------------
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.1.2.RELEASE</version>
+                <configuration>
+                    <classifier>exec</classifier>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+---------------------------------------------------------------------
+
 +
 [source,java]
 ---------------------------------------------------------------------
