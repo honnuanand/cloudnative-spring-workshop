@@ -49,6 +49,15 @@ public class City implements Serializable {
 +
 Notice that we're using http://docs.oracle.com/javaee/6/tutorial/doc/bnbpz.html[JPA] annotations on the class and its fields. We're also employing https://projectlombok.org/features/all[Lombok], so we don't have to write a bunch of boilerplate code (e.g., getter and setter methods).  You'll need to use your IDE's features to add the appropriate import statements.
 +
+[source,xml]
+---------------------------------------------------------------------
+<dependency>
+  <groupId>org.projectlombok</groupId>
+  <artifactId>lombok</artifactId>
+  <optional>true</optional>
+</dependency>
+---------------------------------------------------------------------
++
 -> Hint: imports should start with `javax.persistence` and `lombok`
 
 . Create the package +io.pivotal.repositories+ and in that package create the interface +CityRepository+. Paste the following code and add appropriate imports:
