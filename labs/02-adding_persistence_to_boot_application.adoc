@@ -56,6 +56,11 @@ Notice that we're using http://docs.oracle.com/javaee/6/tutorial/doc/bnbpz.html[
   <artifactId>lombok</artifactId>
   <optional>true</optional>
 </dependency>
+
+<dependency>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-data-jpa</artifactId>
+ </dependency>
 ---------------------------------------------------------------------
 +
 -> Hint: imports should start with `javax.persistence` and `lombok`
