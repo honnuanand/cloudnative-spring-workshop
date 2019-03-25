@@ -95,6 +95,11 @@ You’ll need to use your IDE’s features to add the appropriate import stateme
 [source,xml]
 ---------------------------------------------------------------------
         <dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+        <dependency>
             <groupId>org.flywaydb</groupId>
             <artifactId>flyway-core</artifactId>
             <version>5.2.4</version>
