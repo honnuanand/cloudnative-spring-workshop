@@ -413,7 +413,7 @@ http://localhost:8080/cities/search/nameContains?q=West&size=1
 +
 [source,bash]
 ---------------------------------------------------------------------
-gradle build
+mvn clean spring-boot:run
 ---------------------------------------------------------------------
 
 . You should already have an application manifest, +manifest.yml+, created in Lab 1; this can be reused.  You'll want to add a timeout param so that our service has enough time to initialize with its data loading:
