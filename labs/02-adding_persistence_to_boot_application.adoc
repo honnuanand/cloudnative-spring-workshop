@@ -511,11 +511,16 @@ OK
 +
 So long as the name of the service contains `mysql` the https://dev.mysql.com/downloads/connector/j/[mysql-connector] JDBC driver will https://github.com/cloudfoundry/java-buildpack/blob/master/docs/framework-maria_db_jdbc.md#mariadb-jdbc-framework[automatically be added] as a runtime dependency. 
 +
-However, we're going to explicitly define a runtime dependency on the MySQL JDBC driver.  Open `build.gradle` for editing and add the following to the `dependencies` section
+However, we're going to explicitly define a runtime dependency on the MySQL JDBC driver.  Open `pom.xml` for editing and add the following to the `dependencies` section
 +
-[source,json]
+[source,xml]
 ---------------------------------------------------------------------
-runtime('mysql:mysql-connector-java:8.0.14')
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.14</version>
+		</dependency>
 ---------------------------------------------------------------------
 + 
 And, of course we must rebuild and repackage the application to have the application recognize the new dependency at runtime
