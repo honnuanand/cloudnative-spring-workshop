@@ -4,7 +4,7 @@
 
 Spring Boot includes a number of additional features to help you monitor and manage your application when it’s pushed to production. These features are added by adding _spring-boot-starter-actuator_ to the classpath.  Our initial project setup already included it as a dependency.
 
-. Verify the Spring Boot Actuator dependency the in following file: */cloud-native-spring/po.xml*. you will need to add this. 
+. Verify the Spring Boot Actuator dependency the in following file: */cloud-native-spring/pom.xml*. you will need to add this. 
 +
 [source,xml]
 ---------------------------------------------------------------------
@@ -23,8 +23,11 @@ By default Spring Boot does not expose these management endpoints (which is a go
 management:
   endpoints:
     web:
-      exposure: 
+      exposure:
         include: "*"
+  endpoint:
+    health:
+      show-details: always
 ---------------------------------------------------------------------
 
 . Run the updated application
