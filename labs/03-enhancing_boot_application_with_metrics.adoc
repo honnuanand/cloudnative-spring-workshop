@@ -157,7 +157,7 @@ http :8080/actuator/info
 +
 *What Just Happened?*
 +
-By including the _gradle-git-properties_ plugin, details about git commit information will be included in the */actuator/info* endpoint. Git information is captured in a _git.properties_ file that is generated with the build. Review the following file: */cloud-native-spring/build/resources/main/git.properties*
+By including the maven _git-commit-id-plugin_ plugin, details about git commit information will be included in the */actuator/info* endpoint. Git information is captured in a _git.properties_ file that is generated with the build. Review the following file: */cloud-native-spring/build/resources/main/git.properties*
 
 == Include Build Info
 
