@@ -209,7 +209,7 @@ http :8080/actuator/info
 +
 *What Just Happened?*
 +
-We have mapped Gradle properties into the /actuator/info endpoint.
+We have mapped build properties into the /actuator/info endpoint.
 +
 Read more about exposing data in the /actuator/info endpoint link:https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#production-ready[here]
 
