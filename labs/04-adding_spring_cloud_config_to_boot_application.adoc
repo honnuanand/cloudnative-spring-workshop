@@ -327,7 +327,7 @@ spring:
 +
 [source,bash]
 ---------------------------------------------------------------------
-gradle clean bootRun
+mvn clean spring-boot:run
 ---------------------------------------------------------------------
 
 . Browse to http://localhost:8080/hello and verify you now see your new greeting.
