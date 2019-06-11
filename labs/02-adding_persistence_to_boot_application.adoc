@@ -15,6 +15,15 @@ This application will allow us to create, read update and delete records in an h
 ---------------------------------------------------------------------
 package io.pivotal.domain;
 
+import java.io.Serializable;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.Id;
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import lombok.Data;
+
+
 @Data
 @Entity
 @Table(name="city")
@@ -93,7 +102,7 @@ You’ll need to use your IDE’s features to add the appropriate import stateme
         </dependency>
 ---------------------------------------------------------------------
 
-. Create a new file named +V1_0__init_database.sql+ underneath _devops-workshop/labs/my_work/cloud-native-spring/src/main/resources/db/migration_, add the following lines and save.
+. Create a new file named +V1_0__init_database.sql+ underneath _cloudnative_/labs/my_work/cloud-native-spring/src/main/resources/db/migration_, add the following lines and save.
 +
 [source,bash]
 ---------------------------------------------------------------------
