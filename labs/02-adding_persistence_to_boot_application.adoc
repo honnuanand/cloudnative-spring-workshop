@@ -47,7 +47,7 @@ public class City implements Serializable {
 
 ---------------------------------------------------------------------
 +
-Notice that we're using http://docs.oracle.com/javaee/6/tutorial/doc/bnbpz.html[JPA] annotations on the class and its fields. We're also employing https://projectlombok.org/features/all[Lombok], so we don't have to write a bunch of boilerplate code (e.g., getter and setter methods).  You'll need to use your IDE's features to add the appropriate import statements.
+Notice that we're using http://docs.oracle.com/javaee/6/tutorial/doc/bnbpz.html[JPA] annotations on the class and its fields. We're also employing https://projectlombok.org/features/all[Lombok], so we don't have to write a bunch of boilerplate code (e.g., getter and setter methods).  You'll need to use your IDE's features to add the appropriate import statements. Make sure to add the <dependency> block inside the <dependencies> block in the pom file.  
 +
 [source,xml]
 ---------------------------------------------------------------------
