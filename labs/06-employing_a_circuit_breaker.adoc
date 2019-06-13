@@ -6,12 +6,12 @@ In this lab we'll utilize Spring Boot and Spring Cloud to make our UI Applicatio
 
 . These features are added by adding _spring-cloud-services-starter-circuit-breaker_ to the classpath.  Open your Gradle build file, found here: */cloud-native-spring-ui/build.gradle*.  Add the following Spring Cloud Services dependency:
 +
-[source,xml]
+[source,groovy]
 ---------------------------------------------------------------------
-        <dependency>
-            <groupId>io.pivotal.spring.cloud</groupId>
-            <artifactId>spring-cloud-services-starter-circuit-breaker</artifactId>
-        </dependency>
+dependencies {
+	// add this dependency
+	implementation('io.pivotal.spring.cloud:spring-cloud-services-starter-circuit-breaker')
+}
 ---------------------------------------------------------------------
 
 . The first thing we need to add to our application is an _@EnableCircuitBreaker_ annotation to the Spring Boot application.  Add this annotation below the other ones on the _CloudNativeSpringUiApplication_ declaration in the class _io.pivotal.CloudNativeSpringUiApplication_ (/cloud-native-spring-ui/src/main/java/io/pivotal/CloudNativeSpringUiApplication.java):
@@ -92,7 +92,7 @@ image::images/dash.jpg[]
 +
 [source,bash]
 ---------------------------------------------------------------------
-mvn test
+gradle build -x test
 ---------------------------------------------------------------------
 
 . Push application into Cloud Foundry
