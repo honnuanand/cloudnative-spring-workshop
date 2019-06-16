@@ -1,0 +1,8 @@
+applications:
+- name: my-go-app
+  disk_quota: 1G
+  instances: 1
+  memory: 64M
+  routes:
+  - route: my-go-app-responsible-topi.apps.diamondbar.cf-app.com
+  stack: cflinuxfs3
