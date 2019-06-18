@@ -1,0 +1,15 @@
+{
+  "FilePath": "/Users/anandrao/pivotal/repos/devops-workshop-maven/labs/samples/dotnet-webhello/dotnet-webhello.csproj",
+  "Configuration": {
+    "ConfigurationName": "MVC-2.1",
+    "LanguageVersion": "2.1",
+    "Extensions": [
+      {
+        "ExtensionName": "MVC-2.1"
+      }
+    ]
+  },
+  "ProjectWorkspaceState": null,
+  "RootNamespace": "dotnet-webhello",
+  "Documents": []
+}

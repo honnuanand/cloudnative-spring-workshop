@@ -3,3 +3,6 @@ spring:
     hikari:
       connection-timeout: 60000
       maximum-pool-size: 5
+  h2:
+    console:
+      enabled=true:

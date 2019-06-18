@@ -1,0 +1,55 @@
+server:
+  port: 8989
+
+---
+spring:
+  application:
+    name: cloud-native-spring-ui
+  datasource:
+    hikari:
+      connection-timeout: 60000
+      maximum-pool-size: 5
+  main:
+    allow-bean-definition-overriding: true
+
+feign-target: http://cloud-native-spring
+
+info: # add this section
+  build:
+    artifact: @project.artifactId@
+    name: @project.name@
+    description: @project.description@
+    version: @project.version@
+
+feign:
+  httpclient:
+    disableSslValidation: true
+  hystrix:
+    enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+
+
+---
+spring:
+  profiles: cloud
+
+feign:
+  httpclient:
+    disableSslValidation: false
+
+feign-target: https://cloud-native-spring
+
+
+management:
+  cloudfoundry:
+    enabled: true
+    skip-ssl-validation: true
+
