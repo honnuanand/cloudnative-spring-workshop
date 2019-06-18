@@ -183,10 +183,12 @@ These features are added by adding _spring-cloud-services-starter-config-client_
 		<dependency>
 			<groupId>io.pivotal.spring.cloud</groupId>
 			<artifactId>spring-cloud-services-starter-config-client</artifactId>
+			<version>2.1.1.RELEASE</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-context</artifactId>
+			<version>2.1.1.RELEASE</version>
 		</dependency>
 
 	</dependencies>
@@ -327,7 +329,7 @@ spring:
 +
 [source,bash]
 ---------------------------------------------------------------------
-gradle clean bootRun
+mvn clean spring-boot:run
 ---------------------------------------------------------------------
 
 . Browse to http://localhost:8080/hello and verify you now see your new greeting.

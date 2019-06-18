@@ -32,17 +32,16 @@ cf login -a $CF_API_ENDPOINT -u $CF_ADMIN -p $CF_ADMIN_PASSWORD --skip-ssl-valid
 
 cf create-org $1
 
-
 for i in `seq 1 $3`;
   do
     # cf create-user USERNAME PASSWORD
-    cf create-user $2_$i $2_$i
+    cf create-user $2_$i password_$i
     # cf create-space SPACE [-o ORG]
-    cf create-space -o $1 $2_$i
+    cf create-space -o $1 $2_space_$i
     # cf set-org-role USERNAME ORG ROLE
     cf set-org-role $2_$i $1 OrgManager
     # cf set-space-role USERNAME ORG SPACE ROLE
-    cf set-space-role $2_$i $1 $2_$i SpaceManager
+    cf set-space-role $2_$i $1 $2_space_$i SpaceManager
     # cf set-space-role USERNAME ORG SPACE ROLE
-    cf set-space-role $2_$i $1 $2_$i SpaceDeveloper
+    cf set-space-role $2_$i $1 $2_space_$i SpaceDeveloper
   done

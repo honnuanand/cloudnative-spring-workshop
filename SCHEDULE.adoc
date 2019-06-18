@@ -10,7 +10,7 @@ Day 1
 | Start   | End        | Session
 | 8:00    | 8:30       | Breakfast
 | 8:30    | 9:00       | Agenda + Introductions
-| 9:00    | 10:00      | https://docs.google.com/presentation/d/1Dqg5T_jTJHLsLG27VKEoXgwpihQSgCvH8h9lFxLtExE[Abstractions]
+| 9:00    | 10:00      | [Abstractions]
 | 10:00   | 10:10      | Break 
 | 10:10   | 11:00      | [PAS Technical Overview]
 | 11:00   | 11:45      | CF Push [hands-on lab]

@@ -65,6 +65,20 @@ Notice that we're using http://docs.oracle.com/javaee/6/tutorial/doc/bnbpz.html[
   <artifactId>lombok</artifactId>
   <optional>true</optional>
 </dependency>
+
+<dependency>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-data-jpa</artifactId>
+</dependency>
+
+<dependency>
+  <groupId>org.springframework.data</groupId>
+  <artifactId>spring-data-rest-hal-browser</artifactId>
+</dependency>
+<dependency>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-hateoas</artifactId>
+</dependency>
 ---------------------------------------------------------------------
 +
 -> Hint: imports should start with `javax.persistence` and `lombok`
@@ -82,6 +96,14 @@ public interface CityRepository extends PagingAndSortingRepository<City, Long> {
 +
 You’ll need to use your IDE’s features to add the appropriate import statements.
 +
+[source,xml]
+---------------------------------------------------------------------
+<dependency>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-data-rest</artifactId>
+</dependency>
+---------------------------------------------------------------------
+
 -> Hint: imports should start with `org.springframework.data.rest.core.annotation` and `org.springframework.data.repository`
 
 == Use Flyway to manage schema 
@@ -90,6 +112,11 @@ You’ll need to use your IDE’s features to add the appropriate import stateme
 +
 [source,xml]
 ---------------------------------------------------------------------
+        <dependency>
+	  <groupId>com.h2database</groupId>
+	  <artifactId>h2</artifactId>
+	  <scope>runtime</scope>
+	</dependency>
         <dependency>
             <groupId>org.flywaydb</groupId>
             <artifactId>flyway-core</artifactId>
@@ -404,7 +431,7 @@ http://localhost:8080/cities/search/nameContains?q=West&size=1
 +
 [source,bash]
 ---------------------------------------------------------------------
-gradle build
+mvn clean spring-boot:run
 ---------------------------------------------------------------------
 
 . You should already have an application manifest, +manifest.yml+, created in Lab 1; this can be reused.  You'll want to add a timeout param so that our service has enough time to initialize with its data loading:
@@ -502,11 +529,16 @@ OK
 +
 So long as the name of the service contains `mysql` the https://dev.mysql.com/downloads/connector/j/[mysql-connector] JDBC driver will https://github.com/cloudfoundry/java-buildpack/blob/master/docs/framework-maria_db_jdbc.md#mariadb-jdbc-framework[automatically be added] as a runtime dependency. 
 +
-However, we're going to explicitly define a runtime dependency on the MySQL JDBC driver.  Open `build.gradle` for editing and add the following to the `dependencies` section
+However, we're going to explicitly define a runtime dependency on the MySQL JDBC driver.  Open `pom.xml` for editing and add the following to the `dependencies` section
 +
-[source,json]
+[source,xml]
 ---------------------------------------------------------------------
-runtime('mysql:mysql-connector-java:8.0.14')
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.14</version>
+		</dependency>
 ---------------------------------------------------------------------
 + 
 And, of course we must rebuild and repackage the application to have the application recognize the new dependency at runtime
