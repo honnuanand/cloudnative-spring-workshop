@@ -1,42 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="21bc4f4f-a919-4d34-8640-d7d40fb53873" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/labs/solutions/01/cloud-native-spring/src/main/java/io/pivotal/CloudNativeSpringApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/labs/solutions/01/cloud-native-spring/src/main/java/io/pivotal/spring/CloudNativeSpringApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labs/solutions/01/cloud-native-spring/src/main/java/io/pivotal/controller/GreetingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/labs/solutions/01/cloud-native-spring/src/main/java/io/pivotal/spring/controller/GreetingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labs/solutions/02/cloud-native-spring/src/main/java/io/pivotal/CloudNativeSpringApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/labs/solutions/02/cloud-native-spring/src/main/java/io/pivotal/spring/CloudNativeSpringApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labs/solutions/02/cloud-native-spring/src/main/java/io/pivotal/controller/GreetingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/labs/solutions/02/cloud-native-spring/src/main/java/io/pivotal/spring/controller/GreetingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labs/solutions/02/cloud-native-spring/src/main/java/io/pivotal/domain/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/labs/solutions/02/cloud-native-spring/src/main/java/io/pivotal/spring/domain/City.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labs/solutions/02/cloud-native-spring/src/main/java/io/pivotal/repositories/CityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/labs/solutions/02/cloud-native-spring/src/main/java/io/pivotal/spring/repositories/CityRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labs/solutions/03/cloud-native-spring/src/main/java/io/pivotal/CloudNativeSpringApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/labs/solutions/03/cloud-native-spring/src/main/java/io/pivotal/spring/CloudNativeSpringApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labs/solutions/03/cloud-native-spring/src/main/java/io/pivotal/FlappingHealthIndicator.java" beforeDir="false" afterPath="$PROJECT_DIR$/labs/solutions/03/cloud-native-spring/src/main/java/io/pivotal/spring/FlappingHealthIndicator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labs/solutions/03/cloud-native-spring/src/main/java/io/pivotal/controller/GreetingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/labs/solutions/03/cloud-native-spring/src/main/java/io/pivotal/spring/controller/GreetingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labs/solutions/03/cloud-native-spring/src/main/java/io/pivotal/domain/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/labs/solutions/03/cloud-native-spring/src/main/java/io/pivotal/spring/domain/City.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labs/solutions/03/cloud-native-spring/src/main/java/io/pivotal/repositories/CityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/labs/solutions/03/cloud-native-spring/src/main/java/io/pivotal/spring/repositories/CityRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labs/solutions/04/cloud-native-spring/src/main/java/io/pivotal/CloudNativeSpringApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/labs/solutions/04/cloud-native-spring/src/main/java/io/pivotal/spring/CloudNativeSpringApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labs/solutions/04/cloud-native-spring/src/main/java/io/pivotal/FlappingHealthIndicator.java" beforeDir="false" afterPath="$PROJECT_DIR$/labs/solutions/04/cloud-native-spring/src/main/java/io/pivotal/spring/FlappingHealthIndicator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labs/solutions/04/cloud-native-spring/src/main/java/io/pivotal/controller/GreetingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/labs/solutions/04/cloud-native-spring/src/main/java/io/pivotal/spring/controller/GreetingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labs/solutions/04/cloud-native-spring/src/main/java/io/pivotal/domain/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/labs/solutions/04/cloud-native-spring/src/main/java/io/pivotal/spring/domain/City.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labs/solutions/04/cloud-native-spring/src/main/java/io/pivotal/repositories/CityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/labs/solutions/04/cloud-native-spring/src/main/java/io/pivotal/spring/repositories/CityRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labs/solutions/05/cloud-native-spring-ui/src/main/java/io/pivotal/CitiesUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/labs/solutions/05/cloud-native-spring-ui/src/main/java/io/pivotal/spring/CitiesUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labs/solutions/05/cloud-native-spring-ui/src/main/java/io/pivotal/CityClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/labs/solutions/05/cloud-native-spring-ui/src/main/java/io/pivotal/spring/CityClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labs/solutions/05/cloud-native-spring-ui/src/main/java/io/pivotal/CloudNativeSpringUiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/labs/solutions/05/cloud-native-spring-ui/src/main/java/io/pivotal/spring/CloudNativeSpringUiApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labs/solutions/05/cloud-native-spring/src/main/java/io/pivotal/CloudNativeSpringApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/labs/solutions/05/cloud-native-spring/src/main/java/io/pivotal/spring/CloudNativeSpringApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labs/solutions/05/cloud-native-spring/src/main/java/io/pivotal/FlappingHealthIndicator.java" beforeDir="false" afterPath="$PROJECT_DIR$/labs/solutions/05/cloud-native-spring/src/main/java/io/pivotal/spring/FlappingHealthIndicator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labs/solutions/05/cloud-native-spring/src/main/java/io/pivotal/controller/GreetingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/labs/solutions/05/cloud-native-spring/src/main/java/io/pivotal/spring/controller/GreetingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labs/solutions/05/cloud-native-spring/src/main/java/io/pivotal/domain/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/labs/solutions/05/cloud-native-spring/src/main/java/io/pivotal/spring/domain/City.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labs/solutions/05/cloud-native-spring/src/main/java/io/pivotal/repositories/CityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/labs/solutions/05/cloud-native-spring/src/main/java/io/pivotal/spring/repositories/CityRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labs/solutions/06/cloud-native-spring-ui/src/main/java/io/pivotal/CitiesUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/labs/solutions/06/cloud-native-spring-ui/src/main/java/io/pivotal/spring/CitiesUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labs/solutions/06/cloud-native-spring-ui/src/main/java/io/pivotal/CityClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/labs/solutions/06/cloud-native-spring-ui/src/main/java/io/pivotal/spring/CityClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labs/solutions/06/cloud-native-spring-ui/src/main/java/io/pivotal/CityClientFallbackFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/labs/solutions/06/cloud-native-spring-ui/src/main/java/io/pivotal/spring/CityClientFallbackFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labs/solutions/06/cloud-native-spring-ui/src/main/java/io/pivotal/CloudNativeSpringUiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/labs/solutions/06/cloud-native-spring-ui/src/main/java/io/pivotal/spring/CloudNativeSpringUiApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labs/solutions/06/cloud-native-spring/src/main/java/io/pivotal/CloudNativeSpringApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/labs/solutions/06/cloud-native-spring/src/main/java/io/pivotal/spring/CloudNativeSpringApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labs/solutions/06/cloud-native-spring/src/main/java/io/pivotal/FlappingHealthIndicator.java" beforeDir="false" afterPath="$PROJECT_DIR$/labs/solutions/06/cloud-native-spring/src/main/java/io/pivotal/spring/FlappingHealthIndicator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labs/solutions/06/cloud-native-spring/src/main/java/io/pivotal/controller/GreetingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/labs/solutions/06/cloud-native-spring/src/main/java/io/pivotal/spring/controller/GreetingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labs/solutions/06/cloud-native-spring/src/main/java/io/pivotal/domain/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/labs/solutions/06/cloud-native-spring/src/main/java/io/pivotal/spring/domain/City.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labs/solutions/06/cloud-native-spring/src/main/java/io/pivotal/repositories/CityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/labs/solutions/06/cloud-native-spring/src/main/java/io/pivotal/spring/repositories/CityRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labs/solutions/config-server/Spring-Cloud-Config-Server/src/main/java/io/pivotal/SpringCloudConfigServer/SpringCloudConfigServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/labs/solutions/config-server/Spring-Cloud-Config-Server/src/main/java/io/pivotal/SpringCloudConfigServer/spring/SpringCloudConfigServerApplication.java" afterDir="false" />
-    </list>
+    <list default="true" id="21bc4f4f-a919-4d34-8640-d7d40fb53873" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +67,7 @@
         <entry file="file://$PROJECT_DIR$/labs/solutions/06/cloud-native-spring/src/test/java/io/pivotal/cloudnativespring/CloudNativeSpringApplicationTests.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="195">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
         </entry>
@@ -619,7 +584,7 @@
     <entry file="file://$PROJECT_DIR$/labs/solutions/06/cloud-native-spring/src/test/java/io/pivotal/cloudnativespring/CloudNativeSpringApplicationTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
