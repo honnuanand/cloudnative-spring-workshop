@@ -129,7 +129,7 @@ You’ll need to use your IDE’s features to add the appropriate import stateme
         </dependency>
 ---------------------------------------------------------------------
 
-. Create a new file named +V1_0__init_database.sql+ underneath _cloudnative_/labs/my_work/cloud-native-spring/src/main/resources/db/migration_, add the following lines and save.
+. Create a new file named +V1_0__init_database.sql+ underneath *labs/my_work/cloud-native-spring/src/main/resources/db/migration*, add the following lines and save.
 +
 [source,bash]
 ---------------------------------------------------------------------
@@ -146,7 +146,7 @@ CREATE TABLE city (
 +
 Spring Boot comes with out-of-the-box https://docs.spring.io/spring-boot/docs/current/reference/html/howto-database-initialization.html#howto-execute-flyway-database-migrations-on-startup[integration] support for https://flywaydb.org/documentation/plugins/springboot[Flyway].  When we start the application it will execute a versioned https://flywaydb.org/documentation/migrations#sql-based-migrations[SQL migration] that will create a new table in the database.
 
-. Add the following lines to _devops-workshop/labs/my_work/cloud-native-spring/src/main/resources/application.yml_
+. Add the following lines to *labs/my_work/cloud-native-spring/src/main/resources/application.yml*
 +
 [source,bash]
 ---------------------------------------------------------------------
@@ -210,7 +210,7 @@ Next we'll import some data.
 
 == Importing Data
 
-. Copy the https://raw.githubusercontent.com/Pivotal-Field-Engineering/devops-workshop/master/labs/import.sql[import.sql] file found in *devops-workshop/labs/* to _devops-workshop/labs/my_work/cloud-native-spring/src/main/resources/db/migration_. Rename the file to be +V1_1__seed_data.sql+. (This is a small subset of a larger dataset containing all of the postal codes in the United States and its territories). 
+. Copy the https://raw.githubusercontent.com/Pivotal-Field-Engineering/devops-workshop/master/labs/import.sql[import.sql] file found in *labs/* to *labs/my_work/cloud-native-spring/src/main/resources/db/migration*. Rename the file to be +V1_1__seed_data.sql+. (This is a small subset of a larger dataset containing all of the postal codes in the United States and its territories). 
 
 . Restart the application.
 +
@@ -320,7 +320,7 @@ Page<City> findByStateCode(@Param("stateCode") String stateCode, Pageable pageab
 +
 [source,bash]
 ---------------------------------------------------------------------
-mvn clean spring-boot:run
+mvn clean package
 ---------------------------------------------------------------------
 
 . Access the application again. Notice that hypermedia for a new +search+ endpoint has appeared.
