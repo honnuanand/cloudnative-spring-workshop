@@ -25,4 +25,5 @@ public interface CityRepository extends PagingAndSortingRepository<City, Long> {
 
     @Query(value ="select c from City c where c.stateCode = :stateCode")
     Page<City> findByStateCode(@Param("stateCode") String stateCode, Pageable pageable);
+
 }
