@@ -118,7 +118,7 @@ These features are added by adding _spring-cloud-services-starter-config-client_
 		<version>2.1.3.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>io.pivotal</groupId>
+	<groupId>com.pivotal</groupId>
 	<artifactId>cloud-native-spring</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>cloud-native-spring</name>
@@ -228,7 +228,7 @@ These features are added by adding _spring-cloud-services-starter-config-client_
 
 ---------------------------------------------------------------------
 
-. Add an _@Value_ annotation, private field, and update the existing _@GetMapping_ annotated method to employ it in _io.pivotal.controller.GreetingController_ (/cloud-native-spring/src/main/java/io/pivotal/controller/GreetingController.java):
+. Add an _@Value_ annotation, private field, and update the existing _@GetMapping_ annotated method to employ it in _com.pivotal.controller.GreetingController_ (/cloud-native-spring/src/main/java/com/pivotal/controller/GreetingController.java):
 +
 [source,java]
 ---------------------------------------------------------------------
@@ -254,7 +254,7 @@ Completed:
 +
 [source,java]
 ---------------------------------------------------------------------
-package io.pivotal.controller;
+package com.pivotal.controller;
 
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -288,11 +288,11 @@ In *pom.xml*, we'll need to add a dependency
 		</dependency>
 ---------------------------------------------------------------------
 +
-In */cloud-native-spring/src/main/java/io/pivotal/CloudNativeSpringApplication.java* right underneath the +public static void main+ method implementation, add
+In */cloud-native-spring/src/main/java/com/pivotal/CloudNativeSpringApplication.java* right underneath the +public static void main+ method implementation, add
 +
 [source,java]
 ---------------------------------------------------------------------
-	@Order(105)
+    @Order(105)
     @Profile("!cloud")
     @Configuration
 	static class ApplicationSecurityOverride extends WebSecurityConfigurerAdapter {
@@ -358,7 +358,7 @@ Create a file named `config-server.json` and update its contents to be
 ---------------------------------------------------------------------
 {
   "git": { 
-    "uri": "https://github.com/honnuanand/app-config"
+    "uri": "https://github.com/pacphi/config-repo"
   }
 }
 ---------------------------------------------------------------------
@@ -397,7 +397,6 @@ applications:
   path: ./target/cloud-native-spring-1.0-SNAPSHOT-exec.jar
   buildpacks: 
   - java_buildpack_offline
-  stack: cflinuxfs3
   timeout: 180
   env:
     JAVA_OPTS: -Djava.security.egd=file:///dev/urandom
