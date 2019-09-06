@@ -1,6 +1,6 @@
-package io.pivotal.repositories;
+package com.pivotal.repositories;
 
-import io.pivotal.domain.City;
+import com.pivotal.domain.City;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.Query;
