@@ -9,8 +9,7 @@ In this lab we'll utilize Spring Boot and Spring Cloud to configure our applicat
 [source,xml]
 ---------------------------------------------------------------------
 <dependency>
-  <groupId>
-  ivotal.spring.cloud</groupId>
+  <groupId>io.pivotal.spring.cloud</groupId>
   <artifactId>spring-cloud-services-starter-service-registry</artifactId>
   <version>${spring-cloud.version}</version>
 </dependency>
