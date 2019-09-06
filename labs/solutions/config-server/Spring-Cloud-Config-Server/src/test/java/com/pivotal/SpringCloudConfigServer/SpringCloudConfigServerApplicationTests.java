@@ -1,4 +1,4 @@
-package io.pivotal.SpringCloudConfigServer;
+package com.pivotal.SpringCloudConfigServer;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

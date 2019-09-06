@@ -1,4 +1,4 @@
-package io.pivotal.domain;
+package com.pivotal.spring.domain;
 
 import java.io.Serializable;
 import javax.persistence.Entity;
