@@ -199,7 +199,7 @@ http :8080/actuator/info
         "version": "0.0.1-SNAPSHOT",
         "artifact": "cloud-native-spring",
         "name": "cloud-native-spring",
-        "group": "io.pivotal",
+        "group": "com.pivotal",
         "time": "2018-03-15T08:22:48.543Z"
     }
 }
@@ -277,11 +277,11 @@ Out of the box is a _DiskSpaceHealthIndicator_ that monitors health in terms of 
 
 . Stop the cloud-native-spring application.
 
-. Create the class _io.pivotal.FlappingHealthIndicator_ (/cloud-native-spring/src/main/java/io/pivotal/FlappingHealthIndicator.java) and into it paste the following code:
+. Create the class com.pivotal.FlappingHealthIndicator_ (/cloud-native-spring/src/main/java/io/pivotal/FlappingHealthIndicator.java) and into it paste the following code:
 +
 [source,java]
 ---------------------------------------------------------------------
-package io.pivotal;
+package com.pivotal;
 
 import java.util.Random;
 
