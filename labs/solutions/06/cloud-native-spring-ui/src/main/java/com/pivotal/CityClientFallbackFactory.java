@@ -1,7 +1,7 @@
-package io.pivotal;
+package com.pivotal;
 
 import feign.hystrix.FallbackFactory;
-import io.pivotal.domain.City;
+import com.pivotal.domain.City;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.hateoas.Resources;
 import org.springframework.stereotype.Component;

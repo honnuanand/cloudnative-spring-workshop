@@ -20,7 +20,7 @@ public class CloudNativeSpringUiApplication {
 	}
 
 	@Order(101)
-	@Profile("!cloud")
+	//@Profile("!cloud")
 	@Configuration
 	static class ApplicationSecurityOverride extends WebSecurityConfigurerAdapter {
 

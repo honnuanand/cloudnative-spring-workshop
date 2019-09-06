@@ -1,4 +1,4 @@
-package io.pivotal;
+package com.pivotal;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -14,7 +14,7 @@ import com.vaadin.flow.theme.material.Material;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import io.pivotal.domain.City;
+import com.pivotal.domain.City;
 
 @Route("cities-ui")
 @Theme(Material.class)

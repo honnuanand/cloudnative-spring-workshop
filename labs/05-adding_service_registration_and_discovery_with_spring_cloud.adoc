@@ -9,8 +9,7 @@ In this lab we'll utilize Spring Boot and Spring Cloud to configure our applicat
 [source,xml]
 ---------------------------------------------------------------------
 <dependency>
-  <groupId>
-  ivotal.spring.cloud</groupId>
+  <groupId>io.pivotal.spring.cloud</groupId>
   <artifactId>spring-cloud-services-starter-service-registry</artifactId>
   <version>${spring-cloud.version}</version>
 </dependency>
@@ -299,7 +298,7 @@ applications:
   memory: 1024M
   random-route: true
   instances: 1
-  path: ./build/libs/cloud-native-spring-ui-1.0-SNAPSHOT-exec.jar
+  path: ./target/cloud-native-spring-0.0.1-SNAPSHOT-exec.jar
   buildpacks:
   - java_buildpack_offline
   timeout: 180 # to give time for the data to import

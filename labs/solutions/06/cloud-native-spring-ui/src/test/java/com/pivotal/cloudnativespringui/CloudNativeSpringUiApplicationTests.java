@@ -1,4 +1,4 @@
-package io.pivotal.cloudnativespringui;
+package com.pivotal.cloudnativespringui;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

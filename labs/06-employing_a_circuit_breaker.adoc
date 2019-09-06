@@ -4,17 +4,19 @@ In this lab we'll utilize Spring Boot and Spring Cloud to make our UI Applicatio
 
 == Define a Circuit Breaker within the _UI Application_
 
-. These features are added by adding _spring-cloud-services-starter-circuit-breaker_ to the classpath.  Open your Gradle build file, found here: */cloud-native-spring-ui/build.gradle*.  Add the following Spring Cloud Services dependency:
+. These features are added by adding _spring-cloud-services-starter-circuit-breaker_ to the classpath.  Open your pom.xml file, found here: */cloud-native-spring-ui/pom.xml*.  Add the following Spring Cloud Services dependency:
 +
 [source,groovy]
 ---------------------------------------------------------------------
-dependencies {
-	// add this dependency
-	implementation('io.pivotal.spring.cloud:spring-cloud-services-starter-circuit-breaker')
-}
+<dependencies
+	 <dependency>
+        <groupId>io.pivotal.spring.cloud</groupId>
+        <artifactId>spring-cloud-services-starter-circuit-breaker</artifactId>
+    </dependency>
+</dependencies>
 ---------------------------------------------------------------------
 
-. The first thing we need to add to our application is an _@EnableCircuitBreaker_ annotation to the Spring Boot application.  Add this annotation below the other ones on the _CloudNativeSpringUiApplication_ declaration in the class _io.pivotal.CloudNativeSpringUiApplication_ (/cloud-native-spring-ui/src/main/java/io/pivotal/CloudNativeSpringUiApplication.java):
+. The first thing we need to add to our application is an _@EnableCircuitBreaker_ annotation to the Spring Boot application.  Add this annotation below the other ones on the _CloudNativeSpringUiApplication_ declaration in the class _com.pivotal.CloudNativeSpringUiApplication_ (/cloud-native-spring-ui/src/main/java/io/pivotal/CloudNativeSpringUiApplication.java):
 +
 [source,java]
 ---------------------------------------------------------------------
@@ -25,7 +27,7 @@ dependencies {
 public class CloudNativeSpringUiApplication {
 ---------------------------------------------------------------------
 
-. When we introduced an _@FeignClient_ into our application we were only required to provide an interface.  We'll implement a factory that creates a fallback implementation (that way we get a handle on any exception so we can log out what caused the fallback to occur).  We'll also reference that class as a fallback in our _@FeignClient_ annotation.  First, create this class in the _io.pivotal_ package:
+. When we introduced an _@FeignClient_ into our application we were only required to provide an interface.  We'll implement a factory that creates a fallback implementation (that way we get a handle on any exception so we can log out what caused the fallback to occur).  We'll also reference that class as a fallback in our _@FeignClient_ annotation.  First, create this class in the _com.pivotal_ package:
 +
 [source,java]
 ---------------------------------------------------------------------
@@ -92,7 +94,7 @@ image::images/dash.jpg[]
 +
 [source,bash]
 ---------------------------------------------------------------------
-gradle build -x test
+mvn clean install -DskipTests
 ---------------------------------------------------------------------
 
 . Push application into Cloud Foundry
