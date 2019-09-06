@@ -9,7 +9,8 @@ In this lab we'll utilize Spring Boot and Spring Cloud to configure our applicat
 [source,xml]
 ---------------------------------------------------------------------
 <dependency>
-  <groupId>io.pivotal.spring.cloud</groupId>
+  <groupId>
+  ivotal.spring.cloud</groupId>
   <artifactId>spring-cloud-services-starter-service-registry</artifactId>
   <version>${spring-cloud.version}</version>
 </dependency>
@@ -17,7 +18,7 @@ In this lab we'll utilize Spring Boot and Spring Cloud to configure our applicat
 ---------------------------------------------------------------------
 +
 
-. Thanks to Spring Cloud instructing your application to register with Eureka is as simple as adding a single annotation to your app! Add an _@EnableDiscoveryClient_ annotation to the class _io.pivotal.CloudNativeSpringApplication_ (/cloud-native-spring/src/main/java/io/pivotal/CloudNativeApplication.java):
+. Thanks to Spring Cloud instructing your application to register with Eureka is as simple as adding a single annotation to your app! Add an _@EnableDiscoveryClient_ annotation to the class _com.pivotal.CloudNativeSpringApplication_ (/cloud-native-spring/src/main/java/io/pivotal/CloudNativeApplication.java):
 +
 [source,java]
 ---------------------------------------------------------------------
@@ -121,13 +122,13 @@ We'll also be using the Domain object from our main Boot application.  Add that 
 [source,xml]
 ---------------------------------------------------------------------
 <dependency>
-    <groupId>io.pivotal</groupId>
+    <groupId>com.pivotal</groupId>
     <artifactId>cloud-native-spring</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 </dependency>
 ---------------------------------------------------------------------
 +
-If you remember earlier, we disabled security for `cloud-native-spring`, we'll do the same again for `cloud-native-spring-ui`. Open *cloud-native-spring-ui/src/main/java/io/pivotal/CloudNativeSpringUiApplication.java* for editing and make sure the contents look like so
+If you remember earlier, we disabled security for `cloud-native-spring`, we'll do the same again for `cloud-native-spring-ui`. Open *cloud-native-spring-ui/src/main/java/com/pivotal/CloudNativeSpringUiApplication.java* for editing and make sure the contents look like so
 +
 [source,java]
 ---------------------------------------------------------------------
@@ -159,12 +160,12 @@ Don't forget to adjust the imports! and the *_spring-security-config_* dependenc
 +
 [source,java]
 ---------------------------------------------------------------------
-package io.pivotal;
+package com.pivotal;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.hateoas.Resources;
-import io.pivotal.domain.City;
+import com.pivotal.domain.City;
 
 
 @FeignClient(name = "https://cloud-native-spring")
@@ -215,11 +216,11 @@ public class CloudNativeSpringUiApplication {
 +
 Don't forget to add imports!
 
-. Next we'll create a https://vaadin.com/docs/flow/Overview.html[Vaadin Flow] UI for rendering our data.  The point of this workshop isn't to go into detail on creating UIs; for now suffice to say that Vaadin is a great tool for quickly creating User Interfaces.  Our UI will consume our Feign client we just created.  Create the class _io.pivotal.AppUi_ (/cloud-native-spring-ui/src/main/java/io/pivotal/AppUi.java) and into it paste the following code:
+. Next we'll create a https://vaadin.com/docs/flow/Overview.html[Vaadin Flow] UI for rendering our data.  The point of this workshop isn't to go into detail on creating UIs; for now suffice to say that Vaadin is a great tool for quickly creating User Interfaces.  Our UI will consume our Feign client we just created.  Create the class _com.pivotal.AppUi_ (/cloud-native-spring-ui/src/main/java/com/pivotal/AppUi.java) and into it paste the following code:
 +
 [source,java]
 ---------------------------------------------------------------------
-package io.pivotal;
+package com.pivotal;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -235,7 +236,7 @@ import com.vaadin.flow.theme.material.Material;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import io.pivotal.domain.City;
+import com.pivotal.domain.City;
 
 @Route("cities-ui")
 @Theme(Material.class)
@@ -279,7 +280,7 @@ spring:
 +
 [source,bash]
 ---------------------------------------------------------------------
-gradle build -x test
+mvn clean install -DskipTests
 ---------------------------------------------------------------------
 +
 -> Note that we're skipping tests here (because we now have a dependency on a running instance of _cloud-native-spring_).
@@ -301,7 +302,6 @@ applications:
   path: ./build/libs/cloud-native-spring-ui-1.0-SNAPSHOT-exec.jar
   buildpacks:
   - java_buildpack_offline
-  stack: cflinuxfs3
   timeout: 180 # to give time for the data to import
   env:
     JAVA_OPTS: -Djava.security.egd=file:///dev/urandom
