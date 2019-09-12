@@ -1,4 +1,4 @@
-package io.pivotal.SpringCloudServiceRegistry;
+package com.pivotal.SpringCloudServiceRegistry;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,4 +1,4 @@
-package com.pivotal.spring;
+package com.pivotal;
 
 import java.util.Random;
 

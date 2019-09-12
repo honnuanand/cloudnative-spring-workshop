@@ -1,4 +1,4 @@
-package com.pivotal.spring;
+package com.pivotal;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -16,7 +16,7 @@ public class CloudNativeSpringApplication {
 	}
 
 	@Order(105)
-	@Profile("!cloud")
+	@Profile("cloud")
 	@Configuration
 	static class ApplicationSecurityOverride extends WebSecurityConfigurerAdapter {
 
