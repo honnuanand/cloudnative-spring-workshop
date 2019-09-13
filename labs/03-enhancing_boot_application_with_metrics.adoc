@@ -173,7 +173,7 @@ info: # add this section
     version: @project.version@
 ---------------------------------------------------------------------
 +
-Note we're defining token delimited value-placeholders for each property.  In order to have these properties replaced, we'll need to add some further instructions to the _build.gradle_ file.
+Note we're defining token delimited value-placeholders for each property.  In order to have these properties replaced, we'll need to add some further instructions to the _pom.xml_ file.
 +
 -> if STS https://jira.spring.io/browse/STS-4201[reports a problem] with the application.yml due to @ character, the problem can safely be ignored.
 
@@ -440,7 +440,7 @@ management:
 
 . Push application into Cloud Foundry
 +
-  gradle build
+  ./mvnw clean package
   cf push
 
 . Find the URL created for your app in the health status report. Browse to your app.  Also view your application details in the Apps Manager UI:
