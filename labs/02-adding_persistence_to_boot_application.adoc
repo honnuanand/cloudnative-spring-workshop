@@ -129,7 +129,7 @@ You’ll need to use your IDE’s features to add the appropriate import stateme
         </dependency>
 ---------------------------------------------------------------------
 
-. Create a new file named +V1_0__init_database.sql+ underneath _cloudnative_/labs/my_work/cloud-native-spring/src/main/resources/db/migration_, add the following lines and save.
+. Create a new file named +V1_0__init_database.sql+ underneath _cloudnative_/labs/my_work/cloud-native-spring/src/main/resources/db/migration, add the following lines and save.
 +
 [source,bash]
 ---------------------------------------------------------------------
