@@ -16,7 +16,7 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <vaadin.version>12.0.7</vaadin.version>
+        <vaadin.version>14.4.10</vaadin.version>
         <pivotal-spring-cloud.version>2.1.1.RELEASE</pivotal-spring-cloud.version>
         <spring-cloud.version>Greenwich.SR1</spring-cloud.version>
     </properties>
